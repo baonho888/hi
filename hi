@@ -1,142 +1,138 @@
-local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()
-local win = DiscordLib:Window("[phan thịnh]")
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()   
+   local win = DiscordLib:Window("[Chanmie] ".." ")   
 local per = game:GetService("Players").LocalPlayer.Name
-DiscordLib:Notification("Premium Stars ⭐ Share", "Hello! ⭐" .. per .. ". Thanks For Buying Premium", "Ok")
-local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
-
-local PhantomForcesWindow = Library:NewWindow("premium script vnp v2⭐")
-
-local KillingCheats = PhantomForcesWindow:NewSection("Kill Options")
-
-KillingCheats:CreateButton("dex v3", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
-end)
-
-KillingCheats:CreateButton("Fast attack guts", function()
-while wait() do
-local args = {
-    [1] = 8,
-    [2] = 3
-}
-
-game:GetService("Players").LocalPlayer.PlayerGui.Zabuza.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok") 
+ 
+  local serv = win:Server("Chan Hub", "")  
+  local drops = serv:Channel("❕Farm+LocalPlayer")  
+  local questlist = {}
+local quest = nil   
+for i, v in pairs(Workspace["NPC DAMAGE"]:GetChildren()) do
+table.insert(questlist, v.Name)
+end
+   local drop = drops:Dropdown("Mob lv 2000 > lv 20000+", questlist, function(y)
+for i, v in pairs(game.Workspace["NPC DAMAGE"]:GetChildren()) do
+if y == v.Name then
+quest = y
+end
 end
 end)
+drops:Button("OneShot⭐", function()
 
-KillingCheats:CreateButton("auto drop moblie", function()while true do
-game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
-wait(0.2)
-end
-end)
-
-KillingCheats:CreateButton("Fast attack gojo", function()
-while wait() do
-local args = {
-    [1] = 8,
-    [2] = 3
-}
-
-game:GetService("Players").LocalPlayer.PlayerGui.Gojo.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
-end
-end)
-
-
-KillingCheats:CreateButton("free admin script", function()loadstring(game:HttpGet(('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'),true))()
-end)
-
-KillingCheats:CreateButton("code spy", function()
-loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
-end)
-
-KillingCheats:CreateButton("script inf yield", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
-
-local KillingCheats = PhantomForcesWindow:NewSection("farm New!")
-KillingCheats:CreateButton("auto quest kaido )", function()while wait() do
-game:GetService("Players").LocalPlayer.PlayerGui.QuestTake.Accept2.RemoteEvent:FireServer()
-end
-end)
-KillingCheats:CreateButton("auto quest grab )", function()while wait() do
-game:GetService("Players").LocalPlayer.PlayerGui.QuestTake.Accept1.RemoteEvent:FireServer()
-end
-end)
-KillingCheats:CreateButton("auto quest pride )", function()while wait() do
-game:GetService("Players").LocalPlayer.PlayerGui.QuestTake.Accept3.RemoteEvent:FireServer()
-end
-end)
-
-local KillingCheats = PhantomForcesWindow:NewSection("main")
-
-KillingCheats:CreateButton("auto giáp(giáp sukuna)", function()
-game:GetService("Players").LocalPlayer.Character:FindFirstChild("Cursed-Armor").K.Fire:FireServer()
-end)
-
-KillingCheats:CreateButton("auto giáp(auto skill z gojo)", function()while true do game:GetService("Players").LocalPlayer.Character.Gojo.Z.Fire:FireServer()
-wait(0.2)
-end
-end)
-KillingCheats:CreateButton("Fast attack Garp", function()
-while wait() do
-local args = {
-    [1] = 8,
-    [2] = 3
-}
-
-game:GetService("Players").LocalPlayer.PlayerGui.BallCombat.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
-end
-end)
-
-KillingCheats:CreateButton("chạy nhanh", function()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-end)
-
-KillingCheats:CreateButton("nhảy cao", function()
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
-end)
-
-
-KillingCheats:CreateButton("on off PvP inf", function()game:GetService("ReplicatedStorage"):WaitForChild("PVPRemotes"):WaitForChild("Active"):InvokeServer()
-
-end)
-
-
-
-KillingCheats:CreateButton("inf skill hub", function()loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-end)
-
-KillingCheats:CreateButton("troll gojo(cần gojo)", function()
-game:GetService("Players").LocalPlayer.Character.Gojo.C.Fire:FireServer()
-end)
-
-
-local KillingCheats = PhantomForcesWindow:NewSection("Raid")
-KillingCheats:CreateButton("kill aura", function() 
-getgenv().G = true
-getgenv().Creator = 'https://discord.gg/B3HqPPzFYr - HalloweenGaster'
-while getgenv().G and getgenv().Creator == 'https://discord.gg/B3HqPPzFYr - HalloweenGaster' do
-wait(0.9)
-sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 112412400000)
-sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 112412400000)
-for i,d in pairs(game.Workspace:GetDescendants()) do
-    if d.ClassName == 'Humanoid' and d.Parent.Name ~= game.Players.LocalPlayer.Name then
-        d.Health = 0
+if quest == nil then
+DiscordLib:Notification("Warning","Please Pick Mob","Ok")
+else
+local mob = game:GetService("Workspace")["NPC DAMAGE"][quest]
+local boss = mob.HumanoidRootPart
+local players = game.Players
+local localPlayer = players.LocalPlayer
+local localDistance = (localPlayer.Character.HumanoidRootPart.Position - boss.Position).Magnitude
+-- Tạo một biến để lưu trữ khoảng cách nhỏ nhất
+local minDistance = math.huge -- Một số rất lớn
+    for i, v in ipairs(players:GetPlayers()) do
+        if v ~= localPlayer then
+            local playerDistance = (v.Character.HumanoidRootPart.Position - boss.Position).Magnitude
+            -- Cập nhật biến minDistance nếu có người chơi khác gần hơn
+            if playerDistance < minDistance then
+                minDistance = playerDistance
+            end
+        end
+    end
+    -- So sánh khoảng cách của bạn với biến minDistance
+    if localDistance > minDistance then
+DiscordLib:Notification("Warning","Thằng"..v.Name.."Gần Mob Hơn Bạn","Ok")
+else
+if mob:FindFirstChild("Enemy") then
+while task.wait() do
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+mob.Enemy.Health = 0 end
+else
+          game.StarterGui:SetCore("SendNotification", { -- SHOW NOTIFIACTION 
+                 Title = "TestHub", -- NOTIFICACTION LABEL 
+                 Text = "Phát Hiện Người Ở Gần Không Thể Oneshot", 
+                 Icon = "", 
+                 Duration = 1 
+             }) 
     end
 end
 end
 end)
-
-KillingCheats:CreateButton("auto spam sever skibidi", function()local args = {
-    [1] = "sever skibidi",
-    [2] = "All"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+local skill = cc
+local sk = drops:Dropdown("Chọn Skill",{"Z","X","C","V","B","N"}, function(b)
+cc = b
 end)
-
-local KillingCheats = PhantomForcesWindow:NewSection("troll 😈")
-KillingCheats:CreateButton("auto đen thui thùi lùi", function()while true do
-game:GetService("Players").LocalPlayer.Character.Gojo.C.Fire:FireServer()
-wait(0.3)
-end 
+drops:Toggle("Tự Động Skill Khi Boss Chết",false,function(e)
+if cc then
+getgenv().q = e
+while q  do wait(.5)
+repeat wait() until game:GetService("Workspace")["NPC DAMAGE"][quest].Enemy.Health == 0 or getgenv().q == false
+spawn(function()
+for i, v in pairs(game.Players.LocalPlayer.Backpack: GetDescendants()) do
+if v:IsA("RemoteEvent") and v.Parent.Name == cc then
+pcall(function()
+v:FireServer()
 end)
+end
+end
+end)
+end
+else
+DiscordLib:Notification("❗ ","Chọn Skill","Ok")
+end
+end)
+drops:Toggle("Auto Kill",false,function(v)
+if quest then
+_G.Autob = v
+while _G.Autob do task.wait()
+pcall(function()
+if game:GetService("Workspace")["NPC DAMAGE"][quest].Enemy.Health > 0 then
+game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].HumanoidRootPart.CFrame*CFrame.new(0,0,11)
+for i, c in pairs(game.Players.LocalPlayer.Backpack: GetChildren()) do
+if c:FindFirstChild("Hitbox") then
+c:WaitForChild("Hitbox"):FireServer()
+end
+end
+else
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(0,1,-13)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(0,4,13)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(-13,1,0)
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["NPC DAMAGE"][quest].Head.CFrame*CFrame.new(10,2,0)
+end
+end)
+end
+else
+DiscordLib: Notification("❗","Chọn Boss","Ok")
+end
+end)
+drops:Toggle("❕ Auto OneShot⭐",false, function(v)
+getgenv().oneshot = v
+if quest == nil then
+DiscordLib:Notification("Warning","Please Pick Mob","Ok")
+else
+while oneshot do wait(0.5)
+pcall(function()
+local mob = game:GetService("Workspace")["NPC DAMAGE"][quest]
+if mob:FindFirstChild("Enemy") then
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+game:GetService("Workspace")["NPC DAMAGE"][quest].Enemy.Health = 0
+else
+DiscordLib:Notification("Warning","Xảy Ra Lỗi","Ok")
+end
+end)
+end
+end
+end)
+drops:Toggle("Auto Bring",false, function(a)
+if quest == nil then   
+   DiscordLib:Notification("Warning", "Choose Mob To Auto Bring", "Ok")   
+   elseif quest ~= nil then   
+ local v2 = nil 
+  getgenv().bringmob2 = a
+ if v2 then v2:Disconnect() end 
+if bringmob2 ~= v2 then
+v2 = game:GetService("Ru
